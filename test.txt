@@ -1,0 +1,2 @@
+python3 -c "import sounddevice as sd; devices = sd.query_devices(); [print(f'{i}: {devices[i][\"name\"]}') for i in range(len(devices))]" > devices.txt
+cat devices.txt
