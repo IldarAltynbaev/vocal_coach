@@ -1,2 +1,10 @@
 python3 -c "import sounddevice as sd; devices = sd.query_devices(); [print(f'{i}: {devices[i][\"name\"]}') for i in range(len(devices))]" > devices.txt
 cat devices.txt
+
+ssh-keygen -t ed25519 -C "ildaraltynbaev89@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+git remote set-url origin git@github.com:username/repo.git
+ssh -T git@github.com
+
